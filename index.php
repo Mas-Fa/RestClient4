@@ -112,6 +112,42 @@ $_SESSION["history"][] = $fact_id;
     </div>
 </div>
 
+<!-- ==================== HISTORY SECTION ======================= -->
+<div id="history" class="page-section container mt-5">
+    <div class="card shadow-lg rounded-4">
+        <div class="card-body">
+
+            <h3 class="mb-3">📜 History Fakta Kucing</h3>
+            <p class="text-muted">History hanya tersimpan sementara</p>
+
+            <?php
+            $no = 1;
+            foreach ($_SESSION["history"] as $item):
+            ?>
+                <div class="history-item light-history" id="history-<?= $no ?>">
+                    <strong><?= $no ?>.</strong> <?= htmlspecialchars($item) ?>
+                </div>
+
+                <script>
+                    document.addEventListener("DOMContentLoaded", function() {
+                        const mode = localStorage.getItem("theme");
+                        const item = document.getElementById("history-<?= $no ?>");
+                        if (mode === "dark") {
+                            item.classList.remove("light-history");
+                            item.classList.add("dark-history");
+                        }
+                    });
+                </script>
+
+            <?php
+                $no++;
+            endforeach;
+            ?>
+
+        </div>
+    </div>
+</div>
+
 <!-- ==================== JS ======================= -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
