@@ -18,8 +18,11 @@ jobs:
         uses: shivammathur/setup-php@v2
         with:
           php-version: '8.2'
-          extensions: mbstring
           coverage: none
+          extensions: mbstring
 
       - name: Install Composer Dependencies
-        run: composer install --no-progress --no-suggest --prefer-dist
+        run: composer install --no-progress --prefer-dist
+
+      - name: Run PHPUnit
+        run: vendor/bin/phpunit --testdox
