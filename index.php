@@ -97,7 +97,7 @@ $_SESSION["history"][] = $fact_id;
             <div class="card shadow-lg border-0 rounded-4">
                 <div class="card-body p-4">
 
-                    <h3 class="text-center mb-3">🐾 Fakta Kucing</h3>
+                    <h3 class="text-center mb-3">🐾 Fakta Kucing (Cat Fact) </h3>
                     <p class="text-center text-muted">Diterjemahkan ke Bahasa Indonesia</p>
 
                     <div class="alert alert-info fs-5"><?= htmlspecialchars($fact_id) ?></div>
