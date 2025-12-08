@@ -97,7 +97,7 @@ $_SESSION["history"][] = $fact_id;
             <div class="card shadow-lg border-0 rounded-4">
                 <div class="card-body p-4">
 
-                    <h3 class="text-center mb-3">🐾 Fakta Kucing</h3>
+                    <h3 class="text-center mb-3">🐾 Fakta Kucing (Cat Fact) </h3>
                     <p class="text-center text-muted">Diterjemahkan ke Bahasa Indonesia</p>
 
                     <div class="alert alert-info fs-5"><?= htmlspecialchars($fact_id) ?></div>
@@ -108,6 +108,42 @@ $_SESSION["history"][] = $fact_id;
 
                 </div>
             </div>
+        </div>
+    </div>
+</div>
+
+<!-- ==================== HISTORY SECTION ======================= -->
+<div id="history" class="page-section container mt-5">
+    <div class="card shadow-lg rounded-4">
+        <div class="card-body">
+
+            <h3 class="mb-3">📜 History Fakta Kucing</h3>
+            <p class="text-muted">History hanya tersimpan sementara</p>
+
+            <?php
+            $no = 1;
+            foreach ($_SESSION["history"] as $item):
+            ?>
+                <div class="history-item light-history" id="history-<?= $no ?>">
+                    <strong><?= $no ?>.</strong> <?= htmlspecialchars($item) ?>
+                </div>
+
+                <script>
+                    document.addEventListener("DOMContentLoaded", function() {
+                        const mode = localStorage.getItem("theme");
+                        const item = document.getElementById("history-<?= $no ?>");
+                        if (mode === "dark") {
+                            item.classList.remove("light-history");
+                            item.classList.add("dark-history");
+                        }
+                    });
+                </script>
+
+            <?php
+                $no++;
+            endforeach;
+            ?>
+
         </div>
     </div>
 </div>
