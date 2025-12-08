@@ -1,8 +1,8 @@
-name: PHPUnit Test
+name: PHP Unit Testing
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "main", "fitur-halaman-history" ]
   pull_request:
     branches: [ "main" ]
 
@@ -11,18 +11,17 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v4
+    - name: Checkout repository
+      uses: actions/checkout@v3
 
-      - name: Setup PHP
-        uses: shivammathur/setup-php@v2
-        with:
-          php-version: '8.2'
-          coverage: none
-          extensions: mbstring
+    - name: Setup PHP
+      uses: shivammathur/setup-php@v2
+      with:
+        php-version: '8.2'
+        coverage: none
 
-      - name: Install Composer Dependencies
-        run: composer install --no-progress --prefer-dist
+    - name: Install Composer Dependencies
+      run: composer install --no-progress --prefer-dist
 
-      - name: Run PHPUnit
-        run: vendor/bin/phpunit -v
+    - name: Run PHPUnit
+      run: vendor/bin/phpunit --configuration phpunit.xml
