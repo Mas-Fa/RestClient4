@@ -148,6 +148,20 @@ $_SESSION["history"][] = $fact_id;
     </div>
 </div>
 
+<!-- ==================== CONTACT SECTION ======================= -->
+<div id="contact" class="page-section container mt-5">
+    <div class="card shadow-lg rounded-4">
+        <div class="card-body">
+            <h3>📞 Contact</h3>
+            <ul>
+                <li>Email: Kel4PPL@mail.com</li>
+                <li>Instagram: @Kel4PPL</li>
+                <li>Github: github.com/Kel4PPL</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
 <!-- ==================== JS ======================= -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
