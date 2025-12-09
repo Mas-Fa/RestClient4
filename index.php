@@ -153,14 +153,26 @@ $_SESSION["history"][] = $fact_id;
     <div class="card shadow-lg rounded-4">
         <div class="card-body">
             <h3>📞 Contact</h3>
-            <ul>
-                <li>Email: Kel4PPL@mail.com</li>
-                <li>Instagram: @Kel4PPL</li>
-                <li>Github: github.com/Kel4PPL</li>
+            <ul class="list-unstyled">
+                <li><strong>Email:</strong> Kel4PPL@mail.com</li>
+                <li><strong>Instagram:</strong> @Kel4PPL</li>
+                <li><strong>Github:</strong> github.com/Kel4PPL</li>
             </ul>
         </div>
     </div>
 </div>
+
+
+<!-- ==================== ABOUT SECTION ======================= -->
+<div id="about" class="page-section container mt-5">
+    <div class="card shadow-lg rounded-4">
+        <div class="card-body">
+            <h3>ℹ️ About</h3>
+            <p>Aplikasi ini menampilkan fakta kucing menggunakan REST Client dari API catfact.ninja.</p>
+        </div>
+    </div>
+</div>
+
 
 <!-- ==================== JS ======================= -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
